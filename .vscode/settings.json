@@ -1,0 +1,33 @@
+{
+    "sqltools.connections": [
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": false
+            },
+            "previewLimit": 50,
+            "server": "LAPTOP-2AGUJESF\\MSSQLSERVER01",
+            "port": 1433,
+            "driver": "MSSQL",
+            "database": "bot_database",
+            "username": "bot",
+            "name": "bot",
+            "password": ""
+        },
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 1433,
+            "driver": "MSSQL",
+            "name": "bot",
+            "database": "bot_database",
+            "username": "bot"
+        }
+    ]
+}
