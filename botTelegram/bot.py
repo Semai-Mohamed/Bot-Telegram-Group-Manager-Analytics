@@ -5,11 +5,12 @@ from telegram import Update
 update = Update
 from telegram.ext import MessageHandler,Application, CommandHandler, filters
 load_dotenv()
+import sys
 TOKEN : Final = os.getenv("TOKEN")
 botUsername : Final = os.getenv("botUsername")
-from commands import start_command ,help_command
+from telegramControl.commands import start_command ,help_command
 from handleMessage import handle_message
-from handleError import error
+from telegramControl.handleError import error
 if __name__ == '__main__':
     print('Starting bot ...')
     app = Application.builder().token(TOKEN).build()

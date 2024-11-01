@@ -1,7 +1,8 @@
 import pyodbc
+import sys
+sys.path.append(os.path.abspath('../database'))
 from telegram import Update
 from telegram.ext import  ContextTypes
-
 # Database connection
 def connect_to_db():
     conn = pyodbc.connect(

@@ -4,14 +4,18 @@ from telegram import Update,InlineKeyboardButton,InlineKeyboardMarkup
 from telegram.error import TimedOut
 from telegram.ext import ContextTypes
 from dotenv import load_dotenv
-from handleResponse import handle_response
-from music import download_music
-from muteUser import mute_user
-from unmuteUser import unmute_user, unmute_user_manuell
-from block import block_user,unblock_user
-from listAdmin import list_admins
-from promot import promot_to_admin,promot_to_special
-from interactions import increment_group_interaction,increment_user_interaction,get_most_active_groups,get_ranked_users
+from telegramControl.handleResponse import handle_response
+from telegramOutsideControl.music import download_music
+from telegramControl.muteUser import mute_user
+from telegramControl.unmuteUser import unmute_user, unmute_user_manuell
+from telegramControl.block import block_user,unblock_user
+from telegramControl.listAdmin import list_admins
+from telegramControl.promot import promot_to_admin,promot_to_special
+from telegramOutsideControl.interactions import increment_group_interaction,increment_user_interaction,get_most_active_groups,get_ranked_users
+import sys
+sys.path.append(os.path.abspath('/database'))
+sys.path.append(os.path.abspath('/telegramControl'))
+sys.path.append(os.path.abspath('/telegramOutsideControl'))
 load_dotenv()
 Token = os.getenv('TOKEN')
 botUsername = os.getenv('botUsername')
