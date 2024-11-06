@@ -5,7 +5,7 @@ Note: Some tables’ code has not been fully completed.
 */
 CREATE DATABASE TelegramBotInteractions;
 USE TelegramBotInteractions;
-CREATE TABLE Users (
+CREATE TABLE Users ( 
     user_id INT PRIMARY KEY,           
     username VARCHAR(255) NOT NULL,   
     interaction_count INT DEFAULT 0,  
